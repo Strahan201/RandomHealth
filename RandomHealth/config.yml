@@ -1,0 +1,55 @@
+messages:
+  access-denied: '&cAccess denied!'
+  invalid-valid: '&cInvalid value!'
+  invalid-attribute: '&cOnly valid attributes are low or high!'
+  set-bound: '&6Bound (%bound%) set to &a%value%'
+  set-interval: '&6Interval set to &a%value%'
+  status-plugin: '&6Plugin functionality is &a%status%'
+  status-interval: '&eInterval: &a%interval%'
+  status-food: '&eFood Settings:%br%&6  Status: &a%food-status%%br%&6  Mode: &a%food-mode%%br%&6  Low: &a%food-low%%br%&6  High: &a%food-high%'
+  status-health: '&eHealth Settings:%br%&6  Status: &a%health-status%%br%&6  Mode: &a%health-mode%%br%&6  Low: &a%health-low%%br%&6  High: &a%health-high%'
+  status-maxhealth: '&eMax Health Settings:%br%&6  Status: &a%maxhealth-status%%br%&6  Low: &a%maxhealth-low%%br%&6  High: &a%maxhealth-high%'
+  set-status: '&e%parameter% &6has been &a%status%'
+  set-value: '&e%parameter% %attribute% &6has been set to &a%value%'
+  reloaded: '&6Configuration reloaded!'
+  help-food: '&fFood usage: &6/rndhealth food [low ##] [high ##] [mode exact/pctmax/pctcur] [toggle]'
+  help-health: '&fHealth usage: &6/rndhealth health [low ##] [high ##] [mode exact/pctmax/pctcur] [toggle]'
+  help-maxhealth: '&fMax health usage: &6/rndhealth maxhealth [low ##] [high ##] [toggle]'
+  help-interval: '&fInterval set usage: &6/rndhealth interval ##'
+  help: '&fPlugin commands:%br%%br%&6/rndhealth - Show status%br%/rndhealth interval ## - Set Interval%br%/rndhealth bound low/high ## - Set health bounds' 
+config:
+  active: false
+  interval: 5
+  global:
+    food:
+      enabled: true
+      low: 0
+      high: 20
+      mode: exact
+    health:
+      enabled: true
+      low: 20
+      high: 50
+      mode: pctmax
+    maxhealth:
+      enabled: false
+      low: 1
+      high: 20
+  perms:
+    essentials_god:
+      weight: 10
+      explicit: true
+      exempt: 'Strahan'
+      health:
+        enabled: false
+        low: 1
+        high: 1
+        mode: exact
+    essentials_fly:
+      weight: 5
+      explicit: true
+      health:
+        enabled: false
+        low: 10
+        high: 10
+        mode: exact

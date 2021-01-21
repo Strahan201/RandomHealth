@@ -1,0 +1,8 @@
+name: RandomHealth
+author: Strahan
+main: com.sylvcraft.RandomHealth
+version: 1.0
+description: Random health every x time period
+commands:
+  rndhealth:
+    description: Plugin command
